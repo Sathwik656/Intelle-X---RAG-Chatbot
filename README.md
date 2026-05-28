@@ -48,7 +48,7 @@
 
 **Intelle X** is a full-stack, production-grade **Retrieval-Augmented Generation (RAG)** chatbot system that enables users to upload PDF documents and query them using natural language — receiving precise, source-cited answers powered by Google Gemini's state-of-the-art embedding and generation models.
 
-The system is architected around an **event-driven, asynchronous workflow engine** (Inngest), a **high-performance vector database** (Qdrant), and a **FastAPI backend** exposing a clean REST API consumed by a beautifully crafted **React 19 frontend** styled with a dark Neo Brutalist design system.
+The system is architected around an **event-driven, asynchronous workflow engine** (Inngest), a **high-performance vector database** (Qdrant), and a **FastAPI backend** exposing a clean REST API consumed by a beautifully crafted **React 19 frontend**.
 
 > Originally prototyped with a Streamlit frontend, the project has been migrated to a production-grade React + Vite SPA, demonstrating a complete full-stack AI SaaS architecture pattern.
 
@@ -69,7 +69,6 @@ The system is architected around an **event-driven, asynchronous workflow engine
 | **Async Inngest Workflows** | Non-blocking, event-driven PDF ingestion and AI query workflows with observable steps |
 | **Dockerized Vector DB** | Qdrant runs in a Docker container with persistent volume storage |
 | **Session Deletion** | Delete sessions along with their associated PDF file, vectors, and chat history |
-| **Neo Brutalist React UI** | Fully custom dark Neo Brutalism design system — ChatGPT-level UX with a unique visual identity |
 | **FastAPI REST API** | Clean, versioned API with CORS, background tasks, lifespan events, and Pydantic validation |
 | **Real-time Ingestion Status** | Frontend polls session status and reflects `pending → processing → ready` state transitions |
 
