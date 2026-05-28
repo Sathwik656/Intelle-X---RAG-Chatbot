@@ -1,0 +1,14 @@
+fastapi
+inngest
+uvicorn[standard]
+streamlit
+python-dotenv
+qdrant-client
+google-generativeai
+
+llama-index==0.10.57
+llama-index-core==0.10.57
+llama-index-readers-file==0.1.30
+
+pypdf
+python-multipart

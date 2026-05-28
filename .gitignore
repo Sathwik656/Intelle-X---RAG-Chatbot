@@ -1,0 +1,50 @@
+# Python / Virtual Environment
+RAG_Chatbot/.venv/
+RAG_Chatbot/__pycache__/
+RAG_Chatbot/*.py[cod]
+RAG_Chatbot/*.egg-info/
+RAG_Chatbot/build/
+RAG_Chatbot/dist/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node / JS dependencies and build outputs
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+node_modules/
+dist/
+
+# Local databases and runtime state
+RAG_Chatbot/sessions.db
+RAG_Chatbot/qdrant_storage/
+RAG_Chatbot/uploads/
+*.db
+*.sqlite3
+
+# Environment files (MUST NOT BE COMMITTED)
+RAG_Chatbot/.env
+.env
+.env.local
+.env.*.local
+.env.production
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
