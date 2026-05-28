@@ -772,9 +772,7 @@ The Inngest Dev Server (`http://localhost:8288`) provides:
 
 ## UI / Design System
 
-### Neo Brutalism Dark Theme
-
-The frontend implements a custom **dark Neo Brutalist** design system built entirely in Tailwind CSS v3.
+The frontend implements a custom **dark Theme** design system built entirely in Tailwind CSS v3.
 
 #### Design Tokens
 
