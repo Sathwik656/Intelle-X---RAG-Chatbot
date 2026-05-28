@@ -22,29 +22,29 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Architecture](#-project-architecture)
-- [Folder Structure](#-folder-structure)
-- [Installation Guide](#-installation-guide)
-- [Docker + Qdrant Setup](#-docker--qdrant-setup)
-- [Environment Configuration](#-environment-configuration)
-- [Running the Backend](#-running-the-backend)
-- [Running the Frontend](#-running-the-frontend)
-- [API Reference](#-api-reference)
-- [Inngest Workflow Documentation](#-inngest-workflow-documentation)
-- [UI / Design System](#-ui--design-system)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Acknowledgements](#-acknowledgements)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Architecture](#project-architecture)
+- [Folder Structure](#folder-structure)
+- [Installation Guide](#installation-guide)
+- [Docker + Qdrant Setup](#docker--qdrant-setup)
+- [Environment Configuration](#environment-configuration)
+- [Running the Backend](#running-the-backend)
+- [Running the Frontend](#running-the-frontend)
+- [API Reference](#api-reference)
+- [Inngest Workflow Documentation](#inngest-workflow-documentation)
+- [UI / Design System](#ui--design-system)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
 **Intelle X** is a full-stack, production-grade **Retrieval-Augmented Generation (RAG)** chatbot system that enables users to upload PDF documents and query them using natural language — receiving precise, source-cited answers powered by Google Gemini's state-of-the-art embedding and generation models.
 
@@ -54,28 +54,28 @@ The system is architected around an **event-driven, asynchronous workflow engine
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 📄 **PDF Upload & Ingestion** | Upload any PDF and trigger an asynchronous ingestion pipeline |
-| 🔪 **Semantic Chunking** | Documents split with 1000-token chunks and 200-token overlap via LlamaIndex `SentenceSplitter` |
-| 🧬 **Gemini Embeddings** | 3072-dimensional dense embeddings via `gemini-embedding-001` for rich semantic representation |
-| 🔍 **Vector Search** | Cosine-similarity vector retrieval from Qdrant using top-k nearest-neighbour search |
-| 🗂️ **Multi-Session PDF History** | Track multiple uploaded documents per user session with status lifecycle management |
-| 💬 **Persistent Chat Sessions** | Full conversation history stored in SQLite, scoped per session with role-based message tracking |
-| 🤖 **AI-Powered Contextual Answers** | `gemini-2.5-flash` generates answers strictly grounded in retrieved document contexts |
-| 🔗 **Source-Aware Responses** | Every answer includes file source attribution for full traceability |
-| ⚡ **Async Inngest Workflows** | Non-blocking, event-driven PDF ingestion and AI query workflows with observable steps |
-| 🐳 **Dockerized Vector DB** | Qdrant runs in a Docker container with persistent volume storage |
-| 🗑️ **Session Deletion** | Delete sessions along with their associated PDF file, vectors, and chat history |
-| 🎨 **Neo Brutalist React UI** | Fully custom dark Neo Brutalism design system — ChatGPT-level UX with a unique visual identity |
-| 🚀 **FastAPI REST API** | Clean, versioned API with CORS, background tasks, lifespan events, and Pydantic validation |
-| 🔄 **Real-time Ingestion Status** | Frontend polls session status and reflects `pending → processing → ready` state transitions |
+| **PDF Upload & Ingestion** | Upload any PDF and trigger an asynchronous ingestion pipeline |
+| **Semantic Chunking** | Documents split with 1000-token chunks and 200-token overlap via LlamaIndex `SentenceSplitter` |
+| **Gemini Embeddings** | 3072-dimensional dense embeddings via `gemini-embedding-001` for rich semantic representation |
+| **Vector Search** | Cosine-similarity vector retrieval from Qdrant using top-k nearest-neighbour search |
+| **Multi-Session PDF History** | Track multiple uploaded documents per user session with status lifecycle management |
+| **Persistent Chat Sessions** | Full conversation history stored in SQLite, scoped per session with role-based message tracking |
+| **AI-Powered Contextual Answers** | `gemini-2.5-flash` generates answers strictly grounded in retrieved document contexts |
+| **Source-Aware Responses** | Every answer includes file source attribution for full traceability |
+| **Async Inngest Workflows** | Non-blocking, event-driven PDF ingestion and AI query workflows with observable steps |
+| **Dockerized Vector DB** | Qdrant runs in a Docker container with persistent volume storage |
+| **Session Deletion** | Delete sessions along with their associated PDF file, vectors, and chat history |
+| **Neo Brutalist React UI** | Fully custom dark Neo Brutalism design system — ChatGPT-level UX with a unique visual identity |
+| **FastAPI REST API** | Clean, versioned API with CORS, background tasks, lifespan events, and Pydantic validation |
+| **Real-time Ingestion Status** | Frontend polls session status and reflects `pending → processing → ready` state transitions |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 | Technology | Version | Role |
@@ -127,7 +127,7 @@ The system is architected around an **event-driven, asynchronous workflow engine
 
 ---
 
-## 🏛️ Project Architecture
+## Project Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -177,7 +177,7 @@ The system is architected around an **event-driven, asynchronous workflow engine
                                                   └─────────────────┘
 ```
 
-### 📥 PDF Ingestion Pipeline
+### PDF Ingestion Pipeline
 
 ```
 User Uploads PDF
@@ -206,7 +206,7 @@ POST /api/upload  (FastAPI)
                    └── db.update_session_status(session_id, "ready", chunks_count=N)
 ```
 
-### 🔍 RAG Query Pipeline
+### RAG Query Pipeline
 
 ```
 User Sends Message
@@ -240,7 +240,7 @@ POST /api/chat  (FastAPI)
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 RAG/
@@ -302,7 +302,7 @@ RAG/
 
 ---
 
-## 🚀 Installation Guide
+## Installation Guide
 
 ### Prerequisites
 
@@ -389,7 +389,7 @@ INNGEST_API_BASE=http://127.0.0.1:8288/v1
 3. Click **"Create API Key"**
 4. Copy the generated key and paste it into your `.env` file
 
-> **⚠️ Important:** Never commit your `.env` file to version control. It is included in `.gitignore` by default.
+> **Important:** Never commit your `.env` file to version control. It is included in `.gitignore` by default.
 
 ---
 
@@ -405,7 +405,7 @@ npm install
 
 ---
 
-## 🐳 Docker + Qdrant Setup
+## Docker + Qdrant Setup
 
 Qdrant must be running before starting the backend. Use Docker to spin it up:
 
@@ -470,7 +470,7 @@ docker logs qdrant
 
 ---
 
-## ⚙️ Running the Backend
+## Running the Backend
 
 You need **three terminal windows** running simultaneously for the full backend stack:
 
@@ -505,7 +505,7 @@ docker start qdrant
 
 ---
 
-## 🖥️ Running the Frontend
+## Running the Frontend
 
 ```bash
 cd frontend
@@ -517,7 +517,7 @@ npm run dev
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 All endpoints are prefixed with `/api`.
 
@@ -679,7 +679,7 @@ DELETE /api/sessions/{session_id}
 
 ---
 
-## ⚡ Inngest Workflow Documentation
+## Inngest Workflow Documentation
 
 Inngest provides **event-driven, durable workflow orchestration** — each workflow is a series of observable steps that can be retried independently on failure.
 
@@ -770,7 +770,7 @@ The Inngest Dev Server (`http://localhost:8288`) provides:
 
 ---
 
-## 🎨 UI / Design System
+## UI / Design System
 
 ### Neo Brutalism Dark Theme
 
@@ -833,24 +833,24 @@ App.jsx
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 | Priority | Feature |
 |---|---|
-| 🔴 High | **Multi-collection Qdrant support** — isolate each session's vectors in a dedicated Qdrant collection to enable per-document querying |
-| 🔴 High | **WebSocket streaming** — stream Gemini responses token-by-token for real-time chat experience |
-| 🟡 Medium | **GitHub repository ingestion** — connect and ingest entire GitHub repos as a knowledge source |
-| 🟡 Medium | **Web search integration** — fall back to live web search when document context is insufficient |
-| 🟡 Medium | **User authentication** — add JWT-based auth to enable multi-user session isolation |
-| 🟡 Medium | **Multi-file query** — allow querying across multiple uploaded PDFs simultaneously |
-| 🟢 Low | **Reranker integration** — add a cross-encoder reranker step between retrieval and generation for improved accuracy |
-| 🟢 Low | **Export conversations** — allow users to export chat history as PDF or Markdown |
-| 🟢 Low | **Production deployment** — Dockerfile for FastAPI + static build of React SPA with Nginx |
-| 🟢 Low | **Automated tests** — pytest for backend endpoints and Playwright for UI |
+|  High | **Multi-collection Qdrant support** — isolate each session's vectors in a dedicated Qdrant collection to enable per-document querying |
+|  High | **WebSocket streaming** — stream Gemini responses token-by-token for real-time chat experience |
+|  Medium | **GitHub repository ingestion** — connect and ingest entire GitHub repos as a knowledge source |
+|  Medium | **Web search integration** — fall back to live web search when document context is insufficient |
+|  Medium | **User authentication** — add JWT-based auth to enable multi-user session isolation |
+|  Medium | **Multi-file query** — allow querying across multiple uploaded PDFs simultaneously |
+|  Low | **Reranker integration** — add a cross-encoder reranker step between retrieval and generation for improved accuracy |
+|  Low | **Export conversations** — allow users to export chat history as PDF or Markdown |
+|  Low | **Production deployment** — Dockerfile for FastAPI + static build of React SPA with Nginx |
+|  Low | **Automated tests** — pytest for backend endpoints and Playwright for UI |
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -882,7 +882,7 @@ chore:    Build process or tooling changes
 
 ---
 
-## 📄 License
+## License
 
 ```
 MIT License
@@ -910,7 +910,7 @@ SOFTWARE.
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 | Project | Usage |
 |---|---|
@@ -928,8 +928,8 @@ SOFTWARE.
 
 <div align="center">
 
-**Built with ❤️ using Google Gemini, Qdrant, Inngest, and React**
+**Built with love using Google Gemini, Qdrant, Inngest, and React**
 
-*If this project helped you, consider giving it a ⭐ on GitHub!*
+*If this project helped you, consider giving it a star on GitHub!*
 
 </div>
