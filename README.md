@@ -2,7 +2,7 @@
 
 # Intelle X — RAG Chatbot
 
-### *AI-Powered Document Intelligence with a Neo Brutalist Interface*
+### *AI-Powered Document Intelligence using RAG pipeline*
 
 ![Python](https://img.shields.io/badge/PYTHON-3.12%2B-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=111111)
 ![FastAPI](https://img.shields.io/badge/FASTAPI-0.136%2B-009688?style=flat-square&logo=fastapi&logoColor=white&labelColor=111111)
